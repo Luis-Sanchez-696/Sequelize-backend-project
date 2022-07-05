@@ -1,0 +1,25 @@
+{
+  "exclude": ["node_modules", "build", "coverage"],
+  "ts-node": {
+    "compilerOptions": {
+      "esModuleInterop": true,
+      "baseUrl": "src"
+    }
+  },
+  "compilerOptions": {
+    "target": "es6",
+    "module": "CommonJS",
+    "esModuleInterop": true,
+    "baseUrl": "./src",
+    "paths": {
+      "entities/*": ["entities/*"],
+      "middlewares/*": ["middlewares/*"],
+      "routers/*": ["routers/*"],
+      "typedef/*": ["typedef/*"],
+      "app": ["app"]
+    },
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "plugins": [{ "transform": "typescript-transform-paths" }]
+  }
+}
